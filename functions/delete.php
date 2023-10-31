@@ -1,6 +1,6 @@
 <?php
-    include_once("../dbConnection/mysqlconfig_connection.php");
+    include_once("../dbConnections/mysqlconfig_conn.php");
     $id = $_GET['id'];
-    mysqli_query($dbc, "DELETE FROM tblsubject WHERE subject_id='$id'");
-    header("Location:../index.php");
+    mysqli_query($dbc, "DELETE FROM tblsubject WHERE Subject_ID = '$id'");
+    header("Location:../index.php"); 
 ?>
