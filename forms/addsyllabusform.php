@@ -23,13 +23,13 @@
                     <td>
                         <select name="Subject_ID">
                             <?php
-                                include_once("../dbConnection/mysqlconfig_connection.php");
-                                $query ="SELECT * FROM tblsubjects";
+                                include_once("../dbConnections/mysqlconfig_conn.php");
+                                $query = "SELECT * FROM tblsubjects";
                                 $result = mysqli_query($dbc, $query);
-                                while($res = mysqli_fetch_array($result)){
-                                    echo "<option value=\"".$res['Subject_ID']."\">";
+                                while ($res = mysqli_fetch_array($result)) {
+                                    echo "<option value=\"" . $res['Subject_ID'] . "\">";
                                     echo $res["Subject_Name"];
-                                    echo"</option>";
+                                    echo "</option>";
                                 }
                             ?>
                         </select>
@@ -37,10 +37,9 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <input type="submit" name="Submit" value="Add"></td>
+                    <td><input type="submit" name="Submit" value="Add"></td>
                 </tr>
             </table>
         </form>
     </body>
-
 </html>
