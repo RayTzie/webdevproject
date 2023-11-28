@@ -30,7 +30,7 @@
     
                 if ($result) {
                     echo "Syllabus added successfully. <br/>";
-                    echo "<a href='./index.php'>View Syllabus</a>";
+                    echo "<a href='../index.php'>View Syllabus</a>";
                 } else {
                     die("Query failed: " . mysqli_error($dbc));
                 }
